@@ -23,13 +23,15 @@ const HookUseReducer = () => {
                 SetTaskText("")
 
                 return [...state, newTaks]
-                break;
+            case "DELETE":
+                return state.filter((task)=>  task.id !== action.id);
         
             default:
-                break;
+                return state;
+                
         }
     };
-    
+
     const [taskText, SetTaskText] = useState("");
     const [ tasks, dispathTasks] = useReducer(taskReducer, initialTaks);
     
@@ -38,7 +40,11 @@ const HookUseReducer = () => {
         e.preventDefault()
 
         dispathTasks({type:"ADD"});
-    }   
+    }; 
+
+    const removeTask = (id) => {
+        dispathTasks({type: "DELETE", id})
+    };
 
   return (
     <div>
@@ -51,7 +57,7 @@ const HookUseReducer = () => {
         </form>
         <input type="submit" value="Enviar" />
         {tasks.map((task)=>(
-            <li key={task.id}>{task.text}</li>
+            <li key={task.id} onDoubleClick={()=>removeTask(task.id)}>{task.text}</li>
         ))}
         <hr />
     </div>
