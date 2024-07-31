@@ -17,7 +17,7 @@ const HookuseRef = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         setText("")
-        inputRef.current.focus();
+        inputRef.current.focus();   
     }
 
 
