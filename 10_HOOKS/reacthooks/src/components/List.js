@@ -1,8 +1,22 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 
-const List = () => {
+const List = ({getItems}) => {
+  const [myItems, setMyItems] = useState([]);
+
+  useEffect(()=>{
+    console.log("buscando itens do DB...");
+
+    setMyItems(getItems);
+  }, [getItems]);
+
+
+
   return (
-    <div>List</div>
+    <div>
+      {myItems && myItems.map((item)=>(
+        <p key={item}>{item}</p>
+      ))}
+    </div>
   )
 }
 

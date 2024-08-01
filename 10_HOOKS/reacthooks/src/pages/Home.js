@@ -3,10 +3,12 @@ import HookUseReducer from "../components/HookUseReducer";
 import HookUseState from "../components/HookUseState";
 import HookuseRef from "../components/HookuseRef";
 import HookUseCallBack from "../components/HookUseCallBack";
+import { someContext } from "../components/HookUseContext";
+import HookUseMemo from "../components/HookUseMemo";
 
 //useContext
 import { useContext } from "react";
-import { someContext } from "../components/HookUseContext";
+
 
 
 
@@ -24,6 +26,7 @@ const Home = () => {
         <hr />
         <HookuseRef/>
         <HookUseCallBack/>
+        <HookUseMemo/>
     </div>
   )
 }
