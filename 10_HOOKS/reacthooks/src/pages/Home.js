@@ -6,10 +6,12 @@ import HookUseCallBack from "../components/HookUseCallBack";
 import HookUseMemo from "../components/HookUseMemo";
 import HookLayoutEffect from "../components/HookLayoutEffect";
 import HookUseImperativeHandle from "../components/HookUseImperativeHandle";
+import HookCustom from "../components/HookCustom";
 
 //useContext
 import { useContext } from "react";
 import { someContext } from "../components/HookUseContext";
+
 
 
 
@@ -32,6 +34,7 @@ const Home = () => {
         <HookUseMemo/>
         <HookLayoutEffect/>
         <HookUseImperativeHandle/>
+        <HookCustom/>
     </div>
   )
 }
