@@ -131,9 +131,23 @@ console.log(products)
 
 * O recurso de template literals permite concatenar uma string de forma mais simples;
 * podemos colocar as variáveis entre o texto;
-* a string fica entre aspas duplas: `texto`;
+* a string fica entre crazes: `texto`;
 * as variáveis são colocadas desta maneira: ${variavel}
 
 */
 
+const nome = "Pablo";
+const idade = 30;
+
+console.log(`O nome do usuário é ${nome} e ele tem ${idade} idade.`)
+
+// destructuring
+
+/* 
+
+* O destructuring é um recurso que pode ser utilizado em arrays e objetos;
+* A ideia é transformar os itens de um desses dados em variáveis;
+* Simplificando a declaração de n variáveis para apenas 1 linha;
+
+*/
 
