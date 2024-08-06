@@ -125,3 +125,15 @@ products.map((product)=>{
 
 console.log(products)
 
+// Template literals
+
+/* 
+
+* O recurso de template literals permite concatenar uma string de forma mais simples;
+* podemos colocar as variáveis entre o texto;
+* a string fica entre aspas duplas: `texto`;
+* as variáveis são colocadas desta maneira: ${variavel}
+
+*/
+
+
