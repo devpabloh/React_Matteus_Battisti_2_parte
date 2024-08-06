@@ -151,3 +151,24 @@ console.log(`O nome do usuário é ${nome} e ele tem ${idade} idade.`)
 
 */
 
+// spread operator
+
+const a1 = [ 1,2,3]
+const a2 = [4,5,6]
+
+const a3 = [...a1, ...a2]
+
+console.log(a3) //aqui nós juntamos dois arrays
+
+const a4 = [0, ...a1, 4] 
+
+console.log(a4) //aqui a gente adicionou o conteúdo que a gente tem no array a1 e juntou com o 0 e o 4
+
+const carName = {name: "Civic"}
+const carBrand = {brand: "Honda"}
+const otherInfos = {km: 1.000, price: 40.000}
+
+const car = {...carName, ...carBrand, ...otherInfos, wheels: 4}
+
+console.log(car)
+
