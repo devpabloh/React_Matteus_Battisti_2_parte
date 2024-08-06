@@ -1,0 +1,80 @@
+// 1 - var, let e const
+
+var x = 10
+var y = 15
+
+if (y > 10){
+    var x = 5
+    console.log(x)
+}
+
+console.log(x)
+
+let a = 10;
+let b = 15;
+
+if(b > 10){
+    let a = 5;
+    console.log(a) // no escopo de bloco "a" é reatribuído e passa a ser 5.
+}
+
+console.log(a) // no escopo global a continua sendo 10.
+
+function logName(){
+    const name = "Pablo";
+    console.log(name)
+}
+
+const name = "Pedro"
+logName()   
+console.log(name)
+
+// Arrow functions
+
+/* 
+* é um recurso para criar funções de forma mais simples;
+* mas ele não funciona exatamente como uma function em todos os aspectos;
+* o this da arrow function é relacionado ao elemento pai de quem está a executando;
+ */
+
+const sum = function sum(a, b){
+    return a + b
+}
+
+/* const arrowSum = (a,b) => {
+    return a + b;
+} */
+
+const arrowSum = (a , b) => a + b // quando eu tenho apenas uma linha de código a arrow function nos permite escrever dessa forma
+
+console.log(sum(5,5))
+console.log(arrowSum(5,5))
+
+const greeting = (nome) =>{
+    if(nome){
+        return console.log(`Olá, ${nome}, seja bem vindo!`)
+    }else{
+        return console.log(" vá para casa do caralho!")
+    }
+}
+
+const testeArrow = ()=> console.log("testou!")
+testeArrow()
+
+greeting("Pablo")
+greeting()
+
+const user = {
+    name: "Theo",
+    sayname(){
+        var self = this
+        setTimeout(function(){
+            console.log(self)
+            console.log(`Nome do usuário: ${self.name}`)
+        }, 500)
+    },
+}
+
+user.sayname()
+
+
