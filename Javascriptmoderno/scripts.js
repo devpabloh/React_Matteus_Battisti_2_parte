@@ -77,4 +77,51 @@ const user = {
 
 user.sayname()
 
+// Método filter
+
+/* 
+
+* é um método de array para filtrar dados, baseado em alguma condição que estabelecemos;
+* 
+
+*/
+
+
+const users = [
+    {nome: "Pablo", available: true},
+    {nome: "Tais", available:false},
+    {nome: "Daniel", available:false},
+    {nome: "Gabriel", available:true}
+]
+
+let availableUsers = users.filter( (user)=> user.available)
+let notAvailableUsers = users.filter((user)=> !user.available)
+
+console.log(availableUsers)
+console.log(notAvailableUsers)
+
+// Método map()
+
+/* 
+
+* O método map também é um método de array, que percorre todos os elementos;
+* quando utilizamos o map, estamos querendo modificar os dados do array;
+* há vários métodos de array importantes no ES6, este é um deles;
+
+*/
+
+const products = [
+    {name: "camisa", price: 10.99, category: "Roupas"},
+    {name: "Chaleira Elétrica", price: 49.99, category: "Eletro"},
+    {name: "Fogão", price: 400.00, category: "Eletro"},
+    {name: "calça jeans", price: 50.99, category: "Roupas"},
+]
+
+products.map((product)=>{
+    if(product.category === "Roupas"){
+        product.onsale = true;
+    }
+})
+
+console.log(products)
 
