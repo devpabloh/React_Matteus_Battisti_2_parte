@@ -50,5 +50,13 @@ CRIANDO UMA API COM EXPRESS
 * depois criaremos uma rota que responde em Json, este é o dado de comunicação entre aplicação e API;
 * é importante definir o verbo correto, como GET ou POST.
 
+INSTALANDO DEPENDÊNCIAS
+
+abrimos o terminal da pasta na qual queremos criar a nossa API e digitamos os seguintes comandos:
+1 - npm init -y
+2 - npm install express nodemon
+3 - entramos no package.json e na parte dos scripts adicionamos o start, escrevendo o seguinte: "start": "nodemon ./index.js localhost 3000"
+4 - 
+
 */
 
