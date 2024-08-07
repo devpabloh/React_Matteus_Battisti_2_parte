@@ -43,4 +43,12 @@ Verbos HTTP
 
 OBS: Os métodos HTTP (Hypertext Transfer Protocol) são um conjunto de métodos de requisição que indicam a ação que deve ser realizada para um recurso específico em uma rede.
 
+CRIANDO UMA API COM EXPRESS
+
+* para criar a API teremos uma tarefa bem simples, comparada a estrutura com handlebars;
+* basta instalar o express, ele fará tudo sozinho neste ponto;
+* depois criaremos uma rota que responde em Json, este é o dado de comunicação entre aplicação e API;
+* é importante definir o verbo correto, como GET ou POST.
+
 */
+
