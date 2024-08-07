@@ -205,6 +205,6 @@ class carros {
     }
 };
 
-let honda = new carros("Honda", "Civic", 40000); // Aqui nós criamos um novo objeto e atribuimos a nossa classe carros, através da palabra reservada new e em seguida o nome da classe que queremos incluir o mesmo.
+let honda = new carros("Honda", "Civic", 40000); // Aqui nós criamos um novo objeto e atribuimos a nossa classe carros, através da palavra reservada new e em seguida o nome da classe que queremos incluir o mesmo. Os valores são atribuidos aos parâmetros na mesma ordem que a gente escreveu os mesmos.
 
 console.log(honda.descontoDoCarro(10)) //aqui estamos usando o método passado dentro da classe para que a gente possa aplicar o desconto ao nosso objeto que foi criado.
