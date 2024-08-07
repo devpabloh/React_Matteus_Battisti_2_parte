@@ -172,3 +172,37 @@ const car = {...carName, ...carBrand, ...otherInfos, wheels: 4}
 
 console.log(car)
 
+// classes
+
+class product {
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+
+    descontoProduto(desconto){
+        return this.price * ((100 - desconto) / 100);
+    }
+}
+
+const shirt = new product("camisa gola v", 100);
+
+console.log(shirt.name);
+console.log(shirt.price)
+
+console.log(shirt.descontoProduto(10))
+
+class carros {
+    constructor(marca, nome, preco){
+        this.marca = marca;
+        this.nome = nome;
+        this.preco = preco;
+    }
+    descontoDoCarro(desconto){
+        return this.preco * ((100 - desconto)/100);
+    }
+};
+
+let honda = new carros("Honda", "Civic", 40000);
+
+console.log(honda.descontoDoCarro(10))
