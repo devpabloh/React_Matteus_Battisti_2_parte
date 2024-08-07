@@ -193,16 +193,18 @@ console.log(shirt.price)
 console.log(shirt.descontoProduto(10))
 
 class carros {
+    // O método constructor é um método especial para criar e inicializar um objeto criado com uma classe
     constructor(marca, nome, preco){
-        this.marca = marca;
+        this.marca = marca; // dentro desse bloco de código estamos atribuindo ao this.marca, this.nome e this.preco, os valores marca, nome e preco que serão passados.
         this.nome = nome;
         this.preco = preco;
     }
+    // desconto do carro é um método que criamos para aplicar um desconto ao carro, através do parâmetro que passamos e o mesmo vai receber o this.preco que virá do constructor e fará com que o desconto seja aplicado ao preco.
     descontoDoCarro(desconto){
-        return this.preco * ((100 - desconto)/100);
+        return this.preco * ((100 - desconto)/100); // usamos () porque assim como na matemática, aquilo que estiver em parênteses será realizado o calculo primeiro.
     }
 };
 
-let honda = new carros("Honda", "Civic", 40000);
+let honda = new carros("Honda", "Civic", 40000); // Aqui nós criamos um novo objeto e atribuimos a nossa classe carros, através da palabra reservada new e em seguida o nome da classe que queremos incluir o mesmo.
 
-console.log(honda.descontoDoCarro(10))
+console.log(honda.descontoDoCarro(10)) //aqui estamos usando o método passado dentro da classe para que a gente possa aplicar o desconto ao nosso objeto que foi criado.
