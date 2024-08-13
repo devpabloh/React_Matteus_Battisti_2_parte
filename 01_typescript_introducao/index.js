@@ -5,5 +5,5 @@ function greeting(name) {
     console.log("olá " + name);
 }
 greeting(firstName);
-greeting(anotherName);
-greeting(x);
+/* greeting(anotherName)
+greeting(x) */
