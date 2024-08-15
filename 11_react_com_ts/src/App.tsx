@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createContext} from 'react';
 
 // 4 - importação de componentes
 import FirstComponents from './components/FirstComponents';
@@ -13,6 +13,15 @@ import State from './components/State';
 // 8 - type
 type textOrNull = string | null;
 
+
+// 9 - context
+interface IAppContext{
+  language: string;
+  frameWork: string;
+  projects: number;
+}
+
+export const AppContext = createContext<IAppContext | null>(null) 
 
 function App() {
 
@@ -31,7 +40,15 @@ function App() {
   const myText:textOrNull = "tem um texto aqui"
   let mySecontText:textOrNull = null
 
+  // 9 - context
+  const contextValue:IAppContext = {
+    language: "javascript",
+    frameWork: "Express",
+    projects: 5,
+  };
+
   return (
+    <AppContext.Provider value={contextValue}>
     <div className="App">
       <h1>TypeScript com React</h1>
       <h2>Nome: {name}</h2>
@@ -50,6 +67,7 @@ function App() {
       {mySecontText && <p>Tem texto na variável</p>}
       
     </div>
+    </AppContext.Provider>
   );
 }
 
